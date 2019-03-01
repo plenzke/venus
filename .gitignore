@@ -1,0 +1,14 @@
+boost_1_69_0/
+*.exe
+*.pdb
+*.filters
+*.user
+*.opensdf
+*.sdf
+*.ilk
+*.suo
+*.obj
+*.log
+*.tlog
+*.idb
+*.lastbuildstate
