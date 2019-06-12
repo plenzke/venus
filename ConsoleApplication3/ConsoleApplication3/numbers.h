@@ -140,3 +140,61 @@ string numbers_lt_1000_to_string(int number)
 	}
 	return answer;
 }
+
+string object_to_string(int number, string s1, string s2, string s3)
+{
+	string answer = numbers_lt_1000_to_string(number);
+	int remainder = number % 100;
+	if (remainder >= 5 && remainder <= 20)
+		answer += " " + s3;
+	else
+	{
+		remainder = number % 10;
+		switch (remainder)
+		{
+		case 0:
+			answer += " " + s3;
+			break;
+		case 1:
+			answer += " " + s1;
+			break;
+		case 2:
+			answer += " " + s2;
+			break;
+		case 3:
+			answer += " " + s2;
+			break;
+		case 4:
+			answer += " " + s2;
+			break;
+		case 5:
+			answer += " " + s3;
+			break;
+		case 6:
+			answer += " " + s3;
+			break;
+		case 7:
+			answer += " " + s3;
+			break;
+		case 8:
+			answer += " " + s3;
+			break;
+		case 9:
+			answer += " " + s3;
+			break;
+		default:
+			break;
+		}
+
+	}
+
+
+	return answer;
+}
+
+
+string currency_to_string(int integer, string is1, string is2, string is3, int decimal, string ds1, string ds2, string ds3)
+{
+
+	string answer = object_to_string(integer, is1, is2, is3) + ", " + object_to_string(decimal, ds1, ds2, ds3);
+	return answer;
